@@ -14,6 +14,14 @@ def is_number(input):
         print("Make sure you enter a number")
 
 
+def format_timer(elipsed_time):
+    seconds = int(elipsed_time) % 60
+    minutes = int(elipsed_time / 60) % 60
+    hours = int(elipsed_time / 3600)
+
+    print(f"{hours:02}:{minutes:02}:{seconds:02}")
+
+
 def start_timer(duration): 
     starting_time = time.perf_counter()
 
@@ -58,17 +66,7 @@ while True:
 '''
 # Gör ett tidtagarur
 starting_time = time.perf_counter()
-def format_timer(elipsed_time): # dvin v while loop
-    seconds = int(elipsed_time) % 60
-    minutes = int(elipsed_time / 60) % 60
-    hours = int(elipsed_time / 3600)
 
-    print(f"{hours:02}:{minutes:02}:{seconds:02}")
-'''
-
-
-'''
-# Skriv ett program som frågar användaren efter ett specifikt datum (månad, dag # och år) och sedan beräknar antalet dagar mellan det datumet och dagens datum.s
 while True:
     current_time = time.perf_counter() # time.time()
     elapsed_time = current_time - starting_time
@@ -77,12 +75,13 @@ while True:
 
     time.sleep(1)
     os.system("cls")
+'''
+
+'''
+# Skriv ett program som frågar användaren efter ett specifikt datum (månad, dag och år) och sedan beräknar antalet dagar mellan det datumet och dagens datum.
 
 current_date = datetime.date.today()
-'''
 
-
-'''
 while True:
     year = is_number(input("Enter a year: "))
     month = is_number(input("Enter a month: "))
